@@ -1,0 +1,97 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #5f7c8a;
+}
+
+header {
+    padding: 20px;
+}
+
+header nav a{
+    padding: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: #5f7c8a;
+}
+
+header nav a:hover {
+    background-color: rgb(173, 223, 177);
+    color: rgb(105, 90, 90);
+}
+
+form{
+    background-color: white;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px
+}
+
+form h3{
+    text-align: center;
+    color: #5f7c8a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+form input[type=date] {
+    color: grey;
+}
+
+form input[type=checkbox] {
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    color: gray;
+}
+
+form select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+    color: gray;
+}
+
+form button {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    background-color: #5f7c8a;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+form button:hover {
+    background-color: #4a5f6a;
+}
+
+#teste {
+    display: flex;
+    color: grey;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
