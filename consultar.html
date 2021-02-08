@@ -11,16 +11,23 @@
     <header>
         <nav>
             <a href="" >Consultar</a>
-            <a href="">Cadastrar</a>
+            <a href="index.html">Cadastrar</a>
         </nav>
     </header>
 
     <form action="#">
         <h3>Selecione o Funcionario</h3>
-        <select name="" id=""></select>
+        <select id="selectConsulta" onchange="mostrarFunc(this.value)">
+            <option value="" disabled selected>Selecione</option>
+        </select>
+
+        <div id="content">
+
+        </div>
         
     </form>
     
-    <script src="main.js"></script>
+
+    <script src="consulta.js"></script>
 </body>
 </html>

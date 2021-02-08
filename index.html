@@ -10,45 +10,49 @@
 
     <header>
         <nav>
-            <a href="" >Consultar</a>
+            <a href="consultar.html" >Consultar</a>
             <a href="">Cadastrar</a>
         </nav>
     </header>
 
     <form action="#">
         <h3>Dados do Funcionario</h3>
-        <input type="text" placeholder="Nome do Funcionário">
-        <input type="text" placeholder="CPF do Funcionário">
-        <input type="text" placeholder="RG do Funcionário">
-        <input type="date">
-        <label for="">Selecione o tipo da habilitação</label>
-        <div id="teste">
-            
-            A<input type="checkbox" name="" id="">
-            B<input type="checkbox" name="" id="">
-            C<input type="checkbox" name="" id="">
-            D<input type="checkbox" name="" id="">
-        </div>
+        <input type="text" placeholder="Nome do Funcionário" id="nomeFunc">
+        <input type="text" placeholder="CPF do Funcionário" maxlength="14" id="cpfInput" onkeypress="mascara(this, '###.###.###-##')" onchange="validarCPF()">
+        <input type="text" placeholder="RG do Funcionário" maxlength="12" id="rgInput" onkeypress="mascara(this, '##.###.###-#')" onchange="validarRg()">
         
-        <select name="" id="">
+        <label for="data">Data de nascimento</label>
+        <input type="date" id="data">
+        
+        <select name="" id="habilitacao">
+            <option value="" disabled selected>Selecione o tipo de Habilitação</option>
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        
+        <select name="" id="selectCivil">
             <option value="" disabled selected>Selecione o estado Cívil</option>
-            <option value="">Solteiro(a)</option>
-            <option value="">Casado(a)</option>
-            <option value="">Viuvo(a)</option>
+            <option value="Solteiro(a)">Solteiro(a)</option>
+            <option value="Casado(a)">Casado(a)</option>
+            <option value="Viuvo(a)">Viuvo(a)</option>
             
         </select>
 
-        <input type="text" placeholder="Digite o CEP">
-        <input type="text" placeholder="Digite a Rua">
-        <input type="text" placeholder="Digite o Bairro">
-        <input type="text" placeholder="Digite a Cidade">
-        <input type="text" placeholder="Digite o Estado">
-        <input type="text" placeholder="Digite o nº da Casa">
-        <input type="text" placeholder="Digite o Complemento">
+        <input type="text" placeholder="Digite o CEP" id="cep" oninput="getDadosCep(this.value)" onkeypress="mascara(this, '#####-###')">
+        <input type="text" placeholder="Digite a Rua" id="rua">
+        <input type="text" placeholder="Digite o Bairro" id="bairro">
+        <input type="text" placeholder="Digite a Cidade" id="cidade">
+        <input type="text" placeholder="Digite o Estado" id="estado">
+        <input type="text" placeholder="Digite o nº da Casa" id="nCasa">
+        <input type="text" placeholder="Digite o Complemento" id="complemento">
 
-        <button>Enviar</button>
+        <button onclick="enviarForm()">Enviar</button>
     </form>
     
     <script src="main.js"></script>
+    <script src="validar.js"></script>
 </body>
 </html>

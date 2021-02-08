@@ -95,3 +95,11 @@ form button:hover {
     justify-content: center;
     width: 100%;
 }
+
+
+
+#content p{
+    color: gray;
+    padding: 10px;
+}
+
